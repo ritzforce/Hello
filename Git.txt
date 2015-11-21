@@ -1,0 +1,5 @@
+//Store credential configuration
+git config credential.helper store
+
+//Git commit and add in one command
+git commit -am "<<Commit Message>>"
