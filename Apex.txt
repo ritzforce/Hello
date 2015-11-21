@@ -1,0 +1,4 @@
+//Retrieve Thousand separator from a currency String
+String formattedNumber = Decimal.valueOf('12345').setScale(0).format();
+String separator = formattedNumber.replaceAll('[0-9]','');
+return separator;
