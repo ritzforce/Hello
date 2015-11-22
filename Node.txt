@@ -15,3 +15,6 @@ SET Debug = exp:* & npm start
 
 response.send(); //Express method that works as end, providing appropiate content type and length
 
+//Forever is a global command line install, that keeps the script running
+forever start "app.js"
+forever stopall 
