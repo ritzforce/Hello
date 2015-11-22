@@ -1,2 +1,9 @@
 //List all global packages only no dependencies
 npm -g ls --depth=0
+
+//Npm folder structure, where things go
+1. locally ./node_modules folder
+2. Globally /user/node or where node is installed, in my C:\Windows
+3. Install command line tools globally
+4. locally is needed, if you need to use require();
+5. need both locally and globally use npm link or alternative install at both locations
