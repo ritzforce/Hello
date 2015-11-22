@@ -1,0 +1,2 @@
+//List all global packages only no dependencies
+npm -g ls --depth=0
