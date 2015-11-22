@@ -13,3 +13,5 @@ Express generator a command line tool to generate express app
 //Start an app with debug
 SET Debug = exp:* & npm start
 
+response.send(); //Express method that works as end, providing appropiate content type and length
+
