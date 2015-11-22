@@ -17,4 +17,7 @@ response.send(); //Express method that works as end, providing appropiate conten
 
 //Forever is a global command line install, that keeps the script running
 forever start "app.js"
-forever stopall 
+forever stopall
+
+//I personally prefer nodemon
+nodemon server.js //and it auto restarts when changes happen 
