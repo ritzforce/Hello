@@ -17,3 +17,37 @@ public class AccountInsertAction {
     return accountIds;
   }
 }
+
+//Batch Class
+global class InjuryRevenueComputationBatch implements Database.Batchable<SObject> {
+  
+  global Database.QueryLocator start( Database.BatchableContext bc ){ 
+     return Database.getQueryLocator([SELECT ID,BillingState,Industry,Total_Employees__c,Est_of_Injuries__c,Est_Annual_Injury_Revenue__c
+                               FROM Account]);
+  }
+
+  global void execute(Database.BatchableContext bc, List<SObject> lstRecord){
+     List<Account> lstAccount = (List<Account>)lstRecord;
+  
+     InjuryRevenue injuryRev = new InjuryRevenue((List<Account>)lstRecord);
+     for(Account account :lstAccount) {
+       injuryRev.populate(account);
+     }
+     update lstAccount;
+  }
+  
+  global void finish(Database.BatchableContext bc){
+  }
+
+}
+//Schedulable
+global class InjuryRevenueSchedulable implements Schedulable {
+  
+  //----------------------------------------------------------------//
+  // Implements Schedulable interface
+  //----------------------------------------------------------------//
+  global void execute(SchedulableContext context) {
+     InjuryRevenueComputationBatch btch = new InjuryRevenueComputationBatch();
+     Database.executeBatch(btch,200);
+  } 
+}
