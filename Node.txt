@@ -20,4 +20,8 @@ forever start "app.js"
 forever stopall
 
 //I personally prefer nodemon
-nodemon server.js //and it auto restarts when changes happen 
+nodemon server.js //and it auto restarts when changes happen
+
+//Using another template engine using Express need to set 2 things
+app.engine("hbs",function(){});
+app.set("view engine","hbs"); // I belive this is the extension 
