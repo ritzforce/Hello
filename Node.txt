@@ -35,3 +35,13 @@ or put in a package.json file in "scripts" section: start eg
     "start": "set RITZ=production && node chap3.js"
   },
  
+ 
+//Configuration variables for Express
+app.set("x-powered-by",false); //remove the X-Powered By Header
+app.set("json replacer",function(key,value){
+  if(key == "abc") return undefined; //key value is not sent
+  return value;
+}); 
+
+use reponse.send({"abc":"def"});
+app.set("json spaces",4);
