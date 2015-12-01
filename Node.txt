@@ -11,7 +11,7 @@ npm -g ls --depth=0
 Express generator a command line tool to generate express app
 
 //Start an app with debug
-SET Debug = exp:* & npm start
+SET Debug=exp:* & npm start
 
 response.send(); //Express method that works as end, providing appropiate content type and length
 
@@ -25,3 +25,13 @@ nodemon server.js //and it auto restarts when changes happen
 //Using another template engine using Express need to set 2 things
 app.engine("hbs",function(){});
 app.set("view engine","hbs"); // I belive this is the extension 
+
+//Set environment variable in windows
+set port=9000; //No spaces between =, to check if the value has been set use echo %port%
+This is only set for the current session. To persist
+either save it in a environment varible in windows (like the java path etc)
+or put in a package.json file in "scripts" section: start eg
+"scripts": {
+    "start": "set RITZ=production && node chap3.js"
+  },
+ 
