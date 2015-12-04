@@ -8,6 +8,13 @@ npm -g ls --depth=0
 4. locally is needed, if you need to use require();
 5. need both locally and globally use npm link or alternative install at both locations
 
+Use the latest keyword in package.json to get the latest modules eg
+{
+  "dependencies": {
+     "passport": "latest"
+  }
+}
+
 Express generator a command line tool to generate express app
 
 //Start an app with debug
@@ -24,7 +31,13 @@ nodemon server.js //and it auto restarts when changes happen
 
 //Using another template engine using Express need to set 2 things
 app.engine("hbs",function(){});
-app.set("view engine","hbs"); // I belive this is the extension 
+app.set("view engine","hbs"); // The name of the engine provided in the previous line
+
+//Express Handlebars
+var exphbs  = require('express-handlebars'); //Require function load the handlebars engine
+app.engine('handlebars', exphbs({defaultLayout: 'main'})); //A function pointer passed here
+
+app.set('view engine', 'handlebars'); //Set the name of the engine here
 
 //Set environment variable in windows
 set port=9000; //No spaces between =, to check if the value has been set use echo %port%

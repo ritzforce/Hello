@@ -1,0 +1,8 @@
+//Provide rounded corners
+.rounded {
+  border-radius: 50%
+}
+
+.rounded {
+   border-radius:10px;
+}
