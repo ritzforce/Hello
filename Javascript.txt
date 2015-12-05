@@ -1,0 +1,8 @@
+1. hasOwnProperty
+Checks if the object has the property and its not inherited via the inheritance chain
+
+o = new Object();
+o.prop = 'exists';
+o.hasOwnProperty('prop');             // returns true
+o.hasOwnProperty('toString');         // returns false
+o.hasOwnProperty('hasOwnProperty');   // returns false
