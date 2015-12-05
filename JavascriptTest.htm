@@ -1,6 +1,7 @@
 <html>
 <head>
 <script>
+/*
 function where(arr, num) {
   // Find my place in this sorted array.
   arr = arr.sort(function(a,b) {
@@ -17,9 +18,35 @@ function where(arr, num) {
   }
   return arr.length;
 }
-
+/*
 var result = where([5, 3, 20, 3], 5);
 console.log(result);
+*/
+
+function unite() {
+   var args = Array.prototype.slice.call(arguments);
+  
+  var concatArray = args.reduce(function(prev,current){
+     
+	 var filtered = current.filter(function(val){
+	     
+		 for(var i = 0; i < prev.length;i++) {
+		    if(prev[i] == val) {
+			  return false;
+			}
+		 }
+		 return true;
+	 });
+     console.log(filtered);
+	 
+   	return prev.concat(filtered);
+  },[]); 
+  console.log(concatArray);
+  return concatArray;
+}
+
+unite([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
 
 
  </script>  

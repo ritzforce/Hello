@@ -1,0 +1,41 @@
+//Find Missing Letter in the series
+function fearNotLetter(str) {
+  var firstChar = str.charCodeAt(0);
+  var lastChar = str.charCodeAt(str.length - 1);
+  
+  for(var i = firstChar,j=0;i < lastChar;i++,j++) {
+    if(str.charCodeAt(j) !== firstChar + j) {
+      return String.fromCharCode(firstChar+j);
+    }
+  }
+  return undefined;
+
+}
+
+//Find the missing letter from the series eg this should return d;
+fearNotLetter("abce"); "abcdefghjklmno", bcd
+
+//Use Array.reduce to create new array
+
+Array.reduce(function(prev,current){},[]); //The last argument is accumulator
+
+//Find duplicate elements 
+function unite(arr1, arr2, arr3) {
+  var args = Array.prototype.slice.call(arguments);
+  
+  return args.reduce(function(prev,current){
+    //Check if array is contained in the filter
+	var filtered = current.filter(function(val){
+      
+      for(var i = 0; i < prev.length;i++){
+        if(prev[i] === val) return false;
+      }
+      return true;
+    });
+    
+	//Return the previous value
+    return prev.concat(filtered);
+    
+  },[]);
+}
+
