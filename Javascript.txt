@@ -6,3 +6,7 @@ o.prop = 'exists';
 o.hasOwnProperty('prop');             // returns true
 o.hasOwnProperty('toString');         // returns false
 o.hasOwnProperty('hasOwnProperty');   // returns false
+
+//Arguments passed to a function is not an array, however it can be converted as an array
+//The following call converts the arguments into array; 
+var arg = Array.prototype.splice.call(arguments); //This is a bit inefficient and hard on the compiler use alternative instead
