@@ -16,6 +16,12 @@ json = json.filter(function(val){
      return (val.id !== 1);
  });
  
+//IE doesn't support Expando properties hence use the data property of jQuery to store custom data
+
+$(element).data("key",value); //value could be an object, string number anything
+$(element).data("key");
+$(element).data(); //get all data associated with the element 
+ 
 //Get current Location 
 if (navigator.geolocation) {
    navigator.geolocation.getCurrentPosition(function(position) {
