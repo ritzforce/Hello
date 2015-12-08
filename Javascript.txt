@@ -22,6 +22,14 @@ $(element).data("key",value); //value could be an object, string number anything
 $(element).data("key");
 $(element).data(); //get all data associated with the element 
  
+typeof "" //string (all lowercase)
+typeof 0 //number
+typeof [] //object
+typeof {} object 
+ 
+
+String.slice method (start Index, End Index)  
+ 
 //Get current Location 
 if (navigator.geolocation) {
    navigator.geolocation.getCurrentPosition(function(position) {

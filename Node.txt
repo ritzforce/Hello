@@ -1,5 +1,6 @@
 //List all global packages only no dependencies
 npm -g ls --depth=0
+npm ls list dependencies
 
 //Npm folder structure, where things go
 1. locally ./node_modules folder
@@ -7,6 +8,8 @@ npm -g ls --depth=0
 3. Install command line tools globally
 4. locally is needed, if you need to use require();
 5. need both locally and globally use npm link or alternative install at both locations
+
+npm init --scope=ritz
 
 Use the latest keyword in package.json to get the latest modules eg
 {
