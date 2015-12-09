@@ -28,7 +28,17 @@ typeof [] //object
 typeof {} object 
  
 
-String.slice method (start Index, End Index)  
+String.slice method (start Index, End Index);
+
+keypress key code returns the ascii keycode eg numpad keycode will also result in ascii keycodes
+  
+jQuery contains selector 
+$("div:contains('hello')); //selects the div which contains the text hello;
+
+//format string with commas
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
  
 //Get current Location 
 if (navigator.geolocation) {

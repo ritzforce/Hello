@@ -39,3 +39,29 @@ function unite(arr1, arr2, arr3) {
   },[]);
 }
 
+//Find the difference between 2 arrays, only unique elements between arrays are returned back
+
+function diff(arr1, arr2) {
+  arr1.sort();
+  arr2.sort();
+  
+  var newArr = [];
+  
+  for(var i = 0; i < arr1.length;i++){
+    var currentItem = arr1[i];
+    var newIndex = arr2.indexOf(currentItem); 
+    if(newIndex == -1){
+      newArr.push(currentItem);
+    }
+    else {
+      arr2.splice(newIndex,1);
+    }
+  }
+  newArr = newArr.concat(arr2);
+  
+  return newArr;
+}
+
+diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+
