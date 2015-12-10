@@ -64,4 +64,42 @@ function diff(arr1, arr2) {
 
 diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 
+//Compute GCD 
+function(a,b) {
+  if(b === 0) return a;
+  return (b,a%b);
+}
+eg run with 10,15
+1st iteration a = 10, b = 15;
+2nd iteration a = 15, b = 10 (10 % 15);
+3rd iteration a = 10  b = 5 (15 % 10);
+4th iteration a = 5 , b = 0 (10 % 5)
+STOP
+
+LCM = (a * b)/GCD(a,b);
+
+//Compute GCD for an array
+arr.reduce(function(prev,current){
+  return gcd(prev,current);
+});
+
+//Flatten an array, recursive function
+//check each element of the the array, if its an array, recursively call else add 
+function steamroller(arr) {
+  var result = [];
+  
+  for(var i = 0; i < arr.length;i++) {
+    if(Array.isArray(arr[i])){
+      var newResult = steamroller(arr[i]);
+      if(newResult.length !== 0) {
+         result.concat(newResult);
+      }
+    }
+    else {
+      result.push(arr[i]);
+    }
+  }
+ return result;
+}
+
 

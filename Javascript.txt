@@ -40,7 +40,22 @@ $("button span:contains('Save')"); //Button with a child span and text save
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
- 
+
+//Add animation to an object
+ element.click(
+    function() {
+      element.addClass('animated ' + animation);
+      //wait for animation to finish before removing classes
+      window.setTimeout( function(){
+          element.removeClass('animated ' + animation);
+      }, 2000);
+    }
+  );
+
+//String replace has a second argument, which inputs the matched regex  
+String.replace(/[A-Z]/g,function(x){
+}); 
+  
 //Get current Location 
 if (navigator.geolocation) {
    navigator.geolocation.getCurrentPosition(function(position) {
