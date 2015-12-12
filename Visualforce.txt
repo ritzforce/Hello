@@ -1,0 +1,1 @@
+docType value = html-5.0,html-4.01-strict,html-4.01-transitional
