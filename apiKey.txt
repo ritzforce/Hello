@@ -1,2 +1,0 @@
-Weather API - 1898faee10e7b153f28246d38b0cb057
-Google geocode API - AIzaSyB6CEdxIJz8omlTxyDfkUjJXNsCde7qcEM
