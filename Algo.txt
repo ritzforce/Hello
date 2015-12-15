@@ -62,6 +62,15 @@ function diff(arr1, arr2) {
   return newArr;
 }
 
+//Alernate implementation
+function diff2(arr1,arr2) {
+  var masterArray = arr1.concat(arr2);
+  return masterArray.filter(function(val){
+    return arr1.indexOf(val) == -1 || arr2.indexOf(val) == -1; //either its not found in array 1 or its not found in array2;
+  });
+}
+
+
 diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 
 //Compute GCD 
