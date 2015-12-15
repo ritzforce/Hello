@@ -18,6 +18,10 @@ Use the latest keyword in package.json to get the latest modules eg
   }
 }
 
+npm install installs both dev dependencies and dependencies
+use npm install --production to install production modules
+
+
 Express generator a command line tool to generate express app
 
 //Start an app with debug

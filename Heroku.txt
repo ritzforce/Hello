@@ -1,0 +1,8 @@
+create a new app
+
+heroku login
+heroku create
+
+git push heroku master
+
+heroku start
