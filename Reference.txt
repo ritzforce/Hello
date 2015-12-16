@@ -6,3 +6,9 @@ http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
 
 Easy animation for pages
 https://daneden.github.io/animate.css/
+
+Hacker earth algo learning tutorials
+https://www.hackerearth.com/codemonk/
+
+website freebies, Images, icons etc
+http://skillcrush.com/2015/12/15/99-freebies-to-help-you-build-awesome-websites/

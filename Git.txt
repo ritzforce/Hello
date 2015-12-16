@@ -6,3 +6,6 @@ git commit -am "<<Commit Message>>"
 
 //Create an alias
 git config alias.pu "push origin master"
+
+//Undo all changes in current branch. Changes are unstaged
+git checkout -- .
