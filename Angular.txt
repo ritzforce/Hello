@@ -1,0 +1,11 @@
+
+<div ng-repeat-start="item in results">
+  This item is repeated
+</div>
+breaks after 4 columns
+<div ng-repeat-end ng-show="{{$index % 4 === 3}}" class="clearfix">
+</div>
+
+date formatting
+{timeInMilliseconds | date:"medium"} //predefined format
+{timeInMilliseconds | date: "mm-dd-yyyy"} //custom format
