@@ -21,6 +21,9 @@ json = json.filter(function(val){
 $(element).data("key",value); //value could be an object, string number anything
 $(element).data("key");
 $(element).data(); //get all data associated with the element 
+
+//find something with a data attribute
+$("#myModal").find("[data-dismiss='modal']").hide();
  
 typeof "" //string (all lowercase)
 typeof 0 //number
@@ -55,6 +58,16 @@ function numberWithCommas(x) {
 //String replace has a second argument, which inputs the matched regex  
 String.replace(/[A-Z]/g,function(x){
 }); 
+
+String.substr(1); select till the end of the String starting with position 1
+String.charCodeAt(0); //Get the numerical Ascii code at the location
+
+String.split(/[aeiou]/,limit); //Used for finding or removing all vowels
+/\s/ stands for space
+/\s|\_/g //Match all spaces and underscores
+
+//Retrieve the Id of an element in a function
+$(this).attr("id")
   
 //Get current Location 
 if (navigator.geolocation) {
