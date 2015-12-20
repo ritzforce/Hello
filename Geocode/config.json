@@ -1,0 +1,36 @@
+{
+	"apiKey" :"<<ENTER API KEY>>", 
+	"overwrite" : false,
+	"ibmHotels" : {
+		"street1": "Property Address",
+		"street2": "",
+		"city": "City",
+		"state": "State/Province Code",
+		"country": "Full Country Name",
+		"zip": ""
+	},
+	"ibmLocations" : {
+		"street1": "Address1",
+		"street2":"Address2",
+		"city": "City / Town / Village",
+		"state": "State",
+		"country": "Country Name",
+		"zip": "Zip Code"
+	},
+	"ibmMerchants" : {
+		"street1": "MERCHANT_STREET",
+		"street2":"",
+		"city": "MERCHANT_CITY",
+		"state": "MERCHANT_STATE",
+		"country": "MERCHANT_CTRY",
+		"zip": "ZIP"
+	},
+	"NEWYORK" : {
+		"street1": "MERCHANT_STREET",
+		"street2":"",
+		"city": "MERCHANT_CITY",
+		"state": "MERCHANT_STATE",
+		"country": "MERCHANT_CTRY",
+		"zip": "ZIP"
+	}
+}
