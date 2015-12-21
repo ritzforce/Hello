@@ -65,3 +65,20 @@ app.set("json replacer",function(key,value){
 
 use reponse.send({"abc":"def"});
 app.set("json spaces",4);
+
+//Iterate through each element of the array
+array.forEach(function(item) { /* etc etc */ })
+
+//Async iteration
+async.each(recordsArray,function(item,callback){},function(err){});
+async.each(recordsArray,function(item,callback){
+  processRecord(item);
+  if(success) {
+    callback(null,success);
+  }
+  else {
+    callback(error,null);
+  }
+},function(err) {
+   //final method called if an err occurs or no error occures
+});
