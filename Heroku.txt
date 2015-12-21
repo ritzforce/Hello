@@ -1,8 +1,8 @@
 create a new app
 
 heroku login
-heroku create
+heroku create <<appname>> //App name is optional
 
 git push heroku master
 
-heroku start
+heroku open

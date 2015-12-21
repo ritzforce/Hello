@@ -9,3 +9,8 @@ breaks after 4 columns
 date formatting
 {timeInMilliseconds | date:"medium"} //predefined format
 {timeInMilliseconds | date: "mm-dd-yyyy"} //custom format
+
+ng-class={"ClassName":"if true","anotherClassName":if something else} //Sadly no final else part, atleast i didn't find
+
+$http.jsonp(url + "?callback=JSON_CALLBACK").then(function(data){
+});
