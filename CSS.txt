@@ -44,3 +44,10 @@ $(".target:even").css();
 $(".target:odd").css();
 
 margin {0 auto;} //Center align a block element eg a table in a div
+the above technique can be used to center align a column of width = 6
+
+<div class="row">
+  <div class="col-lg-6" style="margin:0 auto;float:none;">
+    Hi
+  </div>
+</div>

@@ -12,3 +12,6 @@ https://www.hackerearth.com/codemonk/
 
 website freebies, Images, icons etc
 http://skillcrush.com/2015/12/15/99-freebies-to-help-you-build-awesome-websites/
+
+Random images of fixed sizes
+http://lorempixel.com/200/200/cats/"
