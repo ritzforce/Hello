@@ -9,3 +9,8 @@ git config alias.pu "push origin master"
 
 //Undo all changes in current branch. Changes are unstaged
 git checkout -- .
+
+git add --all //adds all files to staging
+
+
+git clone <<remoteRepoUrl>> --depth=1 //Dont get the commit history and only the latest version

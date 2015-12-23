@@ -68,6 +68,9 @@ String.split(/[aeiou]/,limit); //Used for finding or removing all vowels
 
 //Retrieve the Id of an element in a function
 $(this).attr("id")
+
+//Set a battery of css properties by passing an object
+$(".bg").css({"background-color":"red","border":"1px red solid"});
   
 //Get current Location 
 if (navigator.geolocation) {
