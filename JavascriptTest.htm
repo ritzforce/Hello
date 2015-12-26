@@ -2,6 +2,35 @@
 <head>
 <script>
 
+function sym(args) {
+  var allArray = Array.prototype.slice.call(arguments);
+  //console.log("------------------");
+  //console.log(allArray);  
+  return allArray.reduce(function(prev,next,index){
+    var newArray = prev.concat(next);
+	
+	var filter1 = next.filter(function(item){
+        if(prev.indexOf(item) == -1){
+          return true;
+        }
+		return false;
+    });
+	var filter2 = prev.filter(function(item){
+	  if(next.indexOf(item) == -1) {
+	    return true;
+	  }
+	  return false;
+	});
+    
+	return filter1.concat(filter2);;
+	
+  });
+}
+
+console.log("Result--" + sym([1, 2, 3], [5, 2, 1, 4]));
+
+
+/*
 function inventory(arr1, arr2) {
     // All inventory must be accounted for or you're fired!
   var newArr = [];  
@@ -27,7 +56,7 @@ function inventory(arr1, arr2) {
     console.log(newArr);
   
     return arr1.concat(newArr);
-}
+}*
 
 // Example inventory lists
 var curInv = [
@@ -41,7 +70,7 @@ var newInv = [
 ];
 
 console.log("Result->" + inventory(curInv, newInv));
-
+*/
 
 /*
 function where(arr, num) {
