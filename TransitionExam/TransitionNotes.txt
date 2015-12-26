@@ -1,2 +1,5 @@
 1. Salesforce Classic is the current Look and feel
 2. Salesforce Lightning is the new look and feel, using the Salesforce Lightning Design system (which is based on Bootstrap)
+
+Not supported in Lightning
+URL buttons, inline editing, and customizable tabs. 
