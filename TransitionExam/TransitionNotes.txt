@@ -32,3 +32,31 @@ Static URLs can be challenge in Lightning
 link = '/' + accountId + '/e';
 use the inbuilt {!URLFOR($Action.Contact.Edit,recordId)};
 use sforce.one.navigateToSObject();
+
+
+<apex:page standardController="Account">
+
+    <!-- Base styles -->
+    <apex:stylesheet value="{!URLFOR($Resource.AppStyles, 'app-styles.css')}" />
+    
+    <!-- Lightning Desktop extra styles -->
+    <script type="text/javascript">
+      if( (typeof sforce != 'undefined') && sforce && (!!sforce.one) ) }
+        link = document.createElement( "link" );
+        link.href = "{! URLFOR($Resource.AppStyles, 'lightning-styling.css') }";
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.media = "all";
+        document.getElementsByTagName("head")[0].appendChild(link);
+      }
+    </script>
+
+    <!-- Rest of your page -->
+    
+</apex:page>
+
+Component Reference
+https://ritz123-dev-ed.lightning.force.com/auradocs/reference.app
+
+A .app resource can’t be included in Salesforce1 but a .cmp resource can. 
+You can embed your components in a .app resource to preview it as a standalone app outside of Salesforce1.
