@@ -3,3 +3,32 @@
 
 Not supported in Lightning
 URL buttons, inline editing, and customizable tabs. 
+
+Rolling out Lightning Experience
+Lightning Experience auto-enables  for any standard profile users.
+Create a permission set with the Lightning Experience permission. 
+Apply the permission set directly to the pilot users, then enable Lightning Experience.
+
+Salesforce Classic is page centric relying on server to create a new page, when something interesting happens
+The new view is app centric which uses js to dynamically modify the page, when something interesting happens
+
+Using Visualforce pages in Lightning Experience
+Visualforce pages are embedded in an HTML iframe that’s displayed inside the Lightning Experience app.
+
+you can integrate Canvas apps in Lightning Components
+Development Mode for Visualforce is only available in Salesforce Classic
+
+//Detect is the VF page running in Lightning or Salesforce one
+function isLightningExperienceOrSalesforce1() {
+    return((typeof sforce != 'undefined') && sforce && (!!sforce.one));
+}
+
+SOQL Query, not preferred approach , but ok
+SELECT UserPreferencesLightningExperiencePreferred FROM User WHERE Id = 'CurrentUserId'
+
+sforce.one.navigateToSObject("001U000000727PZ"); //Navigate to a recordId
+
+Static URLs can be challenge in Lightning
+link = '/' + accountId + '/e';
+use the inbuilt {!URLFOR($Action.Contact.Edit,recordId)};
+use sforce.one.navigateToSObject();
