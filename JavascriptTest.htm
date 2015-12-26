@@ -1,6 +1,48 @@
 <html>
 <head>
 <script>
+
+function inventory(arr1, arr2) {
+    // All inventory must be accounted for or you're fired!
+  var newArr = [];  
+  arr2.forEach(function(newItem){
+       var isFound = false;
+       for(var i = 0; i < arr1.length;i++){
+         var currentItem = arr1[i];
+         
+		 console.log("CurrenItem-->" + currentItem);
+		 
+		 if(currentItem[1] === newItem[1]){
+		   console.log("NewItem-->" + newItem);
+		   
+           currentItem[0] += newItem[0];
+           isFound = true;
+           break;
+         }
+       }
+       if(isFound === false){
+         newArr.push(newItem);
+       }
+    });
+    console.log(newArr);
+  
+    return arr1.concat(newArr);
+}
+
+// Example inventory lists
+var curInv = [
+    [21, "Bowling Ball"],
+    [2, "Dirty Sock"],
+];
+
+var newInv = [
+    [67, "Bowling Ball"],
+    [7, "Toothpaste"]
+];
+
+console.log("Result->" + inventory(curInv, newInv));
+
+
 /*
 function where(arr, num) {
   // Find my place in this sorted array.
@@ -22,7 +64,7 @@ function where(arr, num) {
 var result = where([5, 3, 20, 3], 5);
 console.log(result);
 */
-
+/*
 function unite() {
    var args = Array.prototype.slice.call(arguments);
   
@@ -53,7 +95,7 @@ if(navigator.geolocation) {
 	console.log(position.coords.longitude);
   });
 }
-
+*/
 
  </script>  
 </head>

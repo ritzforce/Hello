@@ -71,6 +71,17 @@ $(this).attr("id")
 
 //Set a battery of css properties by passing an object
 $(".bg").css({"background-color":"red","border":"1px red solid"});
+
+//Capture Radio Button change event  
+$("input[name='controlQuestion']").change(radioValueChanged);
+function radioValueChanged() {
+	radioValue = $(this).val();
+	if($(this).is(":checked") && radioValue == "0){}
+	else{}
+}   
+
+//Playing audio file
+$("#audio1").get(0).play(); //Get gives the actual object devoid of jQuery sleightfulness
   
 //Get current Location 
 if (navigator.geolocation) {

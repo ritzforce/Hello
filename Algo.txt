@@ -38,6 +38,15 @@ function unite(arr1, arr2, arr3) {
     
   },[]);
 }
+//Good Strings eg aab is a bad string, because there are consecutive arrays
+var currentArr = str.split("");
+currentArr.reduce(function(prev,next){
+  if(prev.substr(prev.length-1) == next) {
+    return prev;
+  }
+  return prev + next;
+},"");
+
 
 //Find the difference between 2 arrays, only unique elements between arrays are returned back
 
@@ -130,4 +139,8 @@ function convert(num) {
 }
 
 convert(36);
+
+--------------------------
+//Problems
+[1,2,4,5,0],90 //Get the sum of index of pair of numbers, which can make the sum equal to 90; No duplicates allowed. 
 
