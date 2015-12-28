@@ -86,3 +86,6 @@ handleClick : function(event,component) {
 }
 
 Application Event or Component Event
+
+
+$A.util.isUndefined
