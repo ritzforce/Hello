@@ -60,3 +60,29 @@ https://ritz123-dev-ed.lightning.force.com/auradocs/reference.app
 
 A .app resource can’t be included in Salesforce1 but a .cmp resource can. 
 You can embed your components in a .app resource to preview it as a standalone app outside of Salesforce1.
+
+Attributes can be added to
+1) components, 
+2) Application
+3) Events
+4) Interfaces
+The attribute values can be used both client side and server side
+
+Handling onclick events
+<input type="button" value="Hybrid HTML Button" onclick="{!c.handleClick}"/>
+<ui:button label="Framework Button" press="{!c.handleClick}"/>
+
+handleClick : function(event,component) {
+  //get Source is found, the event is being fired from a aura component
+  if(event.getSource()) {
+    var target = event.getSource();
+	cmp.set("v.text",target.get("v.label"));
+  }
+  else {
+    //Event fired from a html component that is input type button
+    var target = event.target.value;
+	cmp.set("v.text",target);
+  }
+}
+
+Application Event or Component Event
