@@ -89,3 +89,7 @@ Application Event or Component Event
 
 
 $A.util.isUndefined
+
+
+Compound Data Types in Apex
+StateCode and CountryCode are always available on compound address fields, whether or not state and country picklists are enabled in your organization.

@@ -51,3 +51,42 @@ the above technique can be used to center align a column of width = 6
     Hi
   </div>
 </div>
+
+Media queries is a css technology that allows css styles to be applied based on the viewport size
+eg pseudo code
+@media screen (min-width:600px) {
+  //CSS style that are only applicable if the width exceeds 600px 
+}
+
+//Actual 
+@media (min-width:1200px) {
+  .container {
+    width:1170px;
+  }
+}
+
+A viewport meta tag means the screen width is set to device width, and the content is rendered taking this into consideration.
+<div class="col-xs-12 col-sm-5">
+ //Occupy 12 on small screen size but only 5 in large screen sizes
+</div>
+<div class="col-xs-12" col-sm-7">
+  7 columsn on the right
+</div>
+
+//Reverse content on large screen using push and pull
+<div class="col-xs-12 col-sm-5 col-sm-push-7">
+  Push to the right
+</div>
+<div class="col-xs-12 col-sm-7 col-sm-pull-5">
+  Push to the left
+</div>
+
+<div class="col-xs-12 col-sm-4 col-sm-offset-1">
+  Offset by 1  Note the sum is 11 and 1 we have provided by offset
+</div>
+<div class="col-xs-12 col-sm-7 col-sm-pull-5">
+  Push to the left
+</div>
+
+http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works
+

@@ -1,0 +1,24 @@
+Algorithmic
+
+    Define a function that returns n lines of Pascal’s Triangle. (this question was the entire interview)
+    Define a function that takes an array of strings, and returns the most commonly occurring string that array (this question came with an execution time limit)
+
+    Use recursion to log a fibonacci sequence of n length.
+
+    Definitional
+
+    Explain the use cases for, and differences between?—?bind, apply and call.
+
+    Explain event delegation and why it is useful.
+
+    What is the event loop?
+
+    How does hoisting work in JavaScript?
+
+    Discussion
+
+    Walk us through the process of creation of an application or website you've built.
+
+    Which new JavaScript / browser features are you most excited about and why?
+
+    What are the differences between functional and imperative programming styles, and explain your preference, if any.

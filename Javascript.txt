@@ -82,6 +82,13 @@ function radioValueChanged() {
 
 //Playing audio file
 $("#audio1").get(0).play(); //Get gives the actual object devoid of jQuery sleightfulness
+
+//Get quotient in Javascript
+var quotient = Math.floor(divident / divisor);
+
+//Get current version of jQuery via jQuery itself
+console.log($.fn.jquery);
+
   
 //Get current Location 
 if (navigator.geolocation) {
