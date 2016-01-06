@@ -88,5 +88,10 @@ A viewport meta tag means the screen width is set to device width, and the conte
   Push to the left
 </div>
 
+//Find all elements that this attribute with value
+<a data-toggle='tooltip'></a>
+
+$("[data-toggle='tooltip']").tooltip();
+
 http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works
 
