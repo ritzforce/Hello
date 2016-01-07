@@ -38,6 +38,8 @@ keypress key code returns the ascii keycode eg numpad keycode will also result i
 jQuery contains selector 
 $("div:contains('hello')); //selects the div which contains the text hello;
 $("button span:contains('Save')"); //Button with a child span and text save
+$('.nav.navbar-nav.navbar-right'): //An element with all these 3 classes applied to it
+
 
 //format string with commas
 function numberWithCommas(x) {

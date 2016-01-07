@@ -82,3 +82,6 @@ async.each(recordsArray,function(item,callback){
 },function(err) {
    //final method called if an err occurs or no error occures
 });
+
+node -v //Display version of node
+npm -v //Verson of npm
