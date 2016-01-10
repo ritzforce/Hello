@@ -95,3 +95,7 @@ $("[data-toggle='tooltip']").tooltip();
 
 http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works
 
+Bower init
+Bower install jQuery -S 
+Bower 
+

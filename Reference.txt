@@ -19,6 +19,9 @@ http://lorempixel.com/200/200/cats/"
 Generate Background images
 http://bg.siteorigin.com/
 
+Page Speed insights
+https://developers.google.com/speed/pagespeed/insights/
+
 Popular Front End Frameworks
 1) Bootstrap
 2) Foundation
