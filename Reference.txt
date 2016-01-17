@@ -22,6 +22,15 @@ http://bg.siteorigin.com/
 Page Speed insights
 https://developers.google.com/speed/pagespeed/insights/
 
+Plugins to Build a complete solution
+https://www.quora.com/How-do-I-create-a-complete-website-for-a-school
+
+CSS Reference
+http://overapi.com/css/
+
+Regex today
+https://egghead.io/series/regex-in-javascript?utm_source=drip&utm_medium=email&utm_campaign=some-help-with-regex-in-javascript
+
 Popular Front End Frameworks
 1) Bootstrap
 2) Foundation

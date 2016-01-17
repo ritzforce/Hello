@@ -12,5 +12,7 @@ git checkout -- .
 
 git add --all //adds all files to staging
 
+//Combine 2 comands
+cp = "!git commit -am commit"  && git push origin master
 
 git clone <<remoteRepoUrl>> --depth=1 //Dont get the commit history and only the latest version
