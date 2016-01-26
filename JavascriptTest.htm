@@ -1,131 +1,70 @@
 <html>
 <head>
 <script>
-
-function sym(args) {
-  var allArray = Array.prototype.slice.call(arguments);
-  //console.log("------------------");
-  //console.log(allArray);  
-  return allArray.reduce(function(prev,next,index){
-    var newArray = prev.concat(next);
-	
-	var filter1 = next.filter(function(item){
-        if(prev.indexOf(item) == -1){
-          return true;
-        }
-		return false;
-    });
-	var filter2 = prev.filter(function(item){
-	  if(next.indexOf(item) == -1) {
-	    return true;
-	  }
-	  return false;
-	});
-    
-	return filter1.concat(filter2);;
-	
-  });
-}
-
-console.log("Result--" + sym([1, 2, 3], [5, 2, 1, 4]));
-
-
-/*
-function inventory(arr1, arr2) {
-    // All inventory must be accounted for or you're fired!
-  var newArr = [];  
-  arr2.forEach(function(newItem){
-       var isFound = false;
-       for(var i = 0; i < arr1.length;i++){
-         var currentItem = arr1[i];
-         
-		 console.log("CurrenItem-->" + currentItem);
-		 
-		 if(currentItem[1] === newItem[1]){
-		   console.log("NewItem-->" + newItem);
-		   
-           currentItem[0] += newItem[0];
-           isFound = true;
-           break;
-         }
-       }
-       if(isFound === false){
-         newArr.push(newItem);
-       }
-    });
-    console.log(newArr);
+function drawer(price, cash, cid) {
+  var change = [];
+  var booleanIsEmpty = true;
   
-    return arr1.concat(newArr);
-}*
-
-// Example inventory lists
-var curInv = [
-    [21, "Bowling Ball"],
-    [2, "Dirty Sock"],
-];
-
-var newInv = [
-    [67, "Bowling Ball"],
-    [7, "Toothpaste"]
-];
-
-console.log("Result->" + inventory(curInv, newInv));
-*/
-
-/*
-function where(arr, num) {
-  // Find my place in this sorted array.
-  arr = arr.sort(function(a,b) {
-     return a - b;
-  });
-  console.log(arr);
-  
-  for(var i = 0; i < arr.length;i++) {
-    console.log(i)
-	console.log(arr[i]);
-    if(arr[i] >= num) {
-      return i;
-    }
+  // Here is your change, ma'am.
+  var difference = cash - price;
+  if(difference === 0) {
+    return [];
   }
-  return arr.length;
-}
-/*
-var result = where([5, 3, 20, 3], 5);
-console.log(result);
-*/
-/*
-function unite() {
-   var args = Array.prototype.slice.call(arguments);
+  var i = cid.length - 1; 
   
-  var concatArray = args.reduce(function(prev,current){
-     
-	 var filtered = current.filter(function(val){
-	     
-		 for(var i = 0; i < prev.length;i++) {
-		    if(prev[i] == val) {
-			  return false;
-			}
-		 }
-		 return true;
-	 });
-     console.log(filtered);
-	 
-   	return prev.concat(filtered);
-  },[]); 
-  console.log(concatArray);
-  return concatArray;
+  for(i = cid.length-1;i > -1 && difference > 0;i--){
+    var currentCoin = cid[i];
+    var denomination = 0;
+    switch(currentCoin[0]){
+      case "ONE HUNDRED":denomination = 100;break;
+      case "TWENTY":denomination = 20;break;
+      case "TEN":denomination = 10;break;
+      case "FIVE":denomination = 5;break;
+      case "ONE":denomination = 1;break;
+      case "QUARTER":denomination = 0.25;break;
+      case "DIME":denomination = 0.10;break;
+      case "NICKEL":denomination = 0.05;break;
+      case "PENNY":denomination = 0.01;break;
+    } 
+    
+    var countOfCurrentDenomination = Math.floor(difference/denomination);
+	if(countOfCurrentDenomination === 0) {
+	  continue;
+	}
+	
+    var amountDue = Math.min(countOfCurrentDenomination,Math.floor(currentCoin[1]/denomination));
+    difference -= denomination * amountDue;
+    
+    cid[1] = cid[1] - amountDue;
+    if(cid[1] !== 0){
+      booleanIsEmpty = false;
+    }
+    change.push(currentCoin[0],amountDue);
+  }
+  
+  if(difference > 0){
+    return "Insufficient Funds";
+  }
+  if(booleanIsEmpty && i === -1){
+    return "Closed";
+  }
+  
+  
+  return change;
 }
 
-unite([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+// Example cash-in-drawer array:
+// [["PENNY", 1.01],
+// ["NICKEL", 2.05],
+// ["DIME", 3.10],
+// ["QUARTER", 4.25],
+// ["ONE", 90.00],
+// ["FIVE", 55.00],
+// ["TEN", 20.00],
+// ["TWENTY", 60.00],
+// ["ONE HUNDRED", 100.00]]
 
-if(navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(function(position){
-	console.log(position.coords.latitude);
-	console.log(position.coords.longitude);
-  });
-}
-*/
-
+console.log(drawer(3.26, 100.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]]));
  </script>  
 </head>
 <body>

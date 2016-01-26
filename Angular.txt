@@ -1,4 +1,3 @@
-
 <div ng-repeat-start="item in results">
   This item is repeated
 </div>
@@ -13,4 +12,37 @@ date formatting
 ng-class={"ClassName":"if true","anotherClassName":if something else} //Sadly no final else part, atleast i didn't find
 
 $http.jsonp(url + "?callback=JSON_CALLBACK").then(function(data){
+});
+
+3 ways of doing DI in Angular
+Inline Array, the most popular one
+var app = angular.app("myApp",[]);
+app.controller("menuController",["$scope",function($scope){
+
+}]);
+
+app.controller("menuController",function($scope){
+});
+
+menuController.$inject = ["$scope"];
+
+Factory and Service
+
+//Factory expects an object to be returned, since this is singleton, it will used through out the project.
+app.factory("menuFac",function(){
+	var obj = {};
+	
+	obj.add = function() {
+	}
+	
+	//An obj must be returned
+	return obj;
+});
+
+//Service does a new function() on the object, its created on, hence this is used
+app.service("menuSer",function(){
+  this.add = function() {
+  };
+  //No return statement here
+
 });

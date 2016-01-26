@@ -32,3 +32,54 @@ str.replace(regex,"replace with");
 str.replace(regex,function(in){}); 
 str.match(regex); returns all the matches, same as calling exec multiple times
 str.search(regex); First index of match that is found
+
+Literal string match is straight forward
+The cat sat on the mat
+Regex = /at/g
+or /.at/g all 3 letter words including spaces
+\./g match the dot character
+
+Repeating value or pattern
+var str = "aaaaaaa";
+var regex = "a{4}"; 4 as a{4,6}; Min 4 and upto 6 
+a{1,}, a+
+a{0,}, a*
+a{0,1} a?
+
+Character classes, each character on its own
+[bm]at => matches bat , mat
+[a-zA-Z12?]at => matches aat 1at 2at but not 3at no escaping needed for folks inside the classes
+
+All alphanumeric classes
+[A-Za-z0-9] => \w [^A-Za-z0-9] => \W
+[0-9] => \d [^0-9] => \D
+[ ] => \s   [^ ] => \S
+
+Capturing Groups
+foo foobar foobaz fooboo
+
+foo(bar|baz)? now bar and baz are capturing groups, you can get their value as $1,$2,$3 etc 
+foo(?:bar|baz) if you don't want to have the $1,$2 values
+
+eg 
+phone numbers
+888-999-10000
+\d{3}\[\s-]?\
+
+Look ahead
+foo(?=bar|boo)
+Negative Look ahead foo(?!bar|baz);
+
+Word boundary
+\b => Negative \B
+\bis\b only the word is eg "This island is his" will match only is
+
+Back reference
+\1 \2 etc
+eg it was the the thing
+(the)\s?(?=\1)
+(\w+)\s?(?=\1) / g
+(<\w+>)(.*)(<\1>).replace("$2");
+
+^ Beginning of a line and $ end of a line 
+but have to use flag /m so 3 flags gim
