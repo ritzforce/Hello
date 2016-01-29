@@ -1,0 +1,19 @@
+JWT => JSON Web token
+An encrypted string containing header,payload is stored in the localStorage.
+To access the apis, it is passed in the http header.
+
+Advantages
+a) Works in Mobile browsers, apps as localStorage is better supported than cookies
+b) client can restart, and as long as the token is valid, doesn't have to relogin
+c) Encrypts user data, and doesn't need a database/memory lookup on the user, hence bit efficient
+
+Steps
+1. Prerequisite Installations
+Node
+yeoman npm install -g yo
+bower  npm install -g bower
+grunt  npm install -g grunt
+angular-generator npm install -g angular-generator
+
+2. Create the Angular Project
+yo angular
