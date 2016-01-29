@@ -1,0 +1,30 @@
+//Install Cordova and Ionic in one go.Global installation
+npm install cordova ionic -g
+
+//Update Pervious Versions of Cordova and Ionic
+npm update -g cordova ionic
+
+//Create an ionic app
+ionic start conFusion sidemenu
+
+//Start and see, what has been built
+ionic serve
+
+//Shows Android and iOS view side by side
+ionic serve --lab 
+
+json-server --watch db.json
+
+//Create a side menu, that can be dragged from left or right
+<ion-side-menus>
+
+	<ion-nav-view name="mainContent">
+	</ion-nav-view>
+
+  <ion-side-menu>
+  </ion-side-menu>
+</ion-side-menus>
+
+
+//Wrap the services into ngResource
+angular.module('confusionApp.services',["ngResource"])
