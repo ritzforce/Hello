@@ -16,3 +16,7 @@ git add --all //adds all files to staging
 cp = "!git commit -am commit"  && git push origin master
 
 git clone <<remoteRepoUrl>> --depth=1 //Dont get the commit history and only the latest version
+
+//Add a remote repo
+git remote add origin https://github.com/ritzforce/portfolio.git
+git push -u origin master

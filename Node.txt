@@ -1,6 +1,7 @@
 //List all global packages only no dependencies
 npm -g ls --depth=0
 npm ls list dependencies
+npm update --save //Update the packages in package.json file locally
 
 //Npm folder structure, where things go
 1. locally ./node_modules folder
@@ -85,3 +86,5 @@ async.each(recordsArray,function(item,callback){
 
 node -v //Display version of node
 npm -v //Verson of npm
+
+

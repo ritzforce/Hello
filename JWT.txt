@@ -17,3 +17,42 @@ angular-generator npm install -g angular-generator
 
 2. Create the Angular Project
 yo angular
+
+grunt serve
+
+3. Create a view
+yo angular:view register
+
+bower install angular-ui-router -S //-S actually changes the index.html (cool !!)
+
+4.Add a app.config.js
+Configure using ui-router
+
+angular.module("jwtApp",["ui.router"]);
+angular.config(function($stateProvider,$urlRouterProvider){
+	$urlRouterProvider.otherwise("/");
+
+    $stateProvider
+    .state("main",{
+	   templateUrl: "/views/main.html"
+    })
+    
+    .state("register",{
+	   templateUrl: "/views/register.html"         
+    });
+});
+
+
+yo angular:controller registerController
+yo angular:validatePassword validatePassword
+
+//Directive creation.
+
+
+
+Api creation
+require("body-parser");
+
+var express = require("express");
+var app = express();
+

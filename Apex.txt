@@ -1,7 +1,12 @@
+
 //Retrieve Thousand separator from a currency String
 String formattedNumber = Decimal.valueOf('12345').setScale(0).format();
 String separator = formattedNumber.replaceAll('[0-9]','');
 return separator;
+
+//Get all Fields for an Object
+Map<String, Schema.SObjectField> fieldMap = Account.sObjectType.getDescribe().fields.getMap();
+
 
 //Invocable Method Example
 public class AccountInsertAction {
@@ -51,3 +56,7 @@ global class InjuryRevenueSchedulable implements Schedulable {
      Database.executeBatch(btch,200);
   } 
 }
+
+scheduledMerge m = new scheduledMerge();
+String sch = '20 30 8 10 2 ?';
+String jobID = system.schedule('Merge Job', sch, m);
