@@ -1,0 +1,315 @@
+/* =Reset default browser CSS.
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: middle;}
+:focus {outline: 0;}
+
+ol, ul {list-style: none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+a img{border: 0;}
+figure{margin:0}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+/* -------------------------------------------------------------- */
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-family: 'Tahoma';
+	font-size: 13px;
+	overflow: hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+textarea, input[type="text"] {
+	-webkit-appearance: none;
+}
+textarea {
+   resize: none;
+}
+p{
+	color: #434343;
+}
+a:hover, a:focus, a:hover p, select:hover, select:focus, select:active{
+	text-decoration: none;
+	outline: none;
+}
+a, a:link,a:active, span{
+	text-decoration: none;
+	outline: none;
+	vertical-align: top;
+}
+.container-fluid{
+	padding: 0;
+	background: url("../i/Background_v2_WithoutHoles-01.png") no-repeat center top;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+}
+.content-game{
+	padding-top: 150px;
+}
+.icon-sun{
+	display: inline-block;
+	width: 50px;
+	height: 53px;
+	float: right;
+	background: url("../i/Sun.png") no-repeat center;
+	background-size: 100%;
+    margin-top: -15px;
+    margin-right: -12px;
+}
+.col-xs-3{
+	width: 30%;
+	height: 107px;
+}
+.col-xs-2 {
+    width: 16.66666667%;
+}
+.item{
+	text-align: center;
+}
+.hole{
+	display: inline-block;
+	width: 80px;
+	height: 35px;
+	background: url("../i/Ground_Hole.png") no-repeat center;
+	background-size: 100%;
+}
+.img-item{
+    display: inline-block;
+    width: 63px;
+    height: 62px;
+    margin-bottom: -27px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+.img-item.three{
+	height: 74px;
+	margin-top: -12px;
+}
+.img-item.for{
+	margin-top: -15px;
+	height: 77px;
+}
+.img-item img{
+	width: 100%;
+}
+.name{
+	color: #3b1e0c;
+	font-size: 15px;
+	font-weight: 600;
+	-ms-transform: rotate(-7deg); /* IE 9 */
+	-webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+	transform: rotate(-7deg);
+	font-style: italic;
+    margin: 0 -4px;
+}
+.ui-progressbar {
+    height: 25px;
+    width: 270px;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+	-webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+	transform: rotate(-90deg);
+	position: absolute;
+	right: -110px;
+	top: 308px;
+	z-index: 99;
+}
+.ui-progressbar .ui-progressbar-value {
+    margin: 0;
+}
+.ui-widget-content {
+    border: none;
+    background: #fff 50% 50% repeat-x;
+}
+.ui-widget-header {
+    border: none;
+    background: #df2027 50% 50% repeat-x;
+}
+.table tbody tr td:first-child{
+	padding-left: 10px;
+}
+.list-btn{
+	width: 100%;
+	height: 115px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding-top: 23px;
+}
+.btn-play{
+	width: 65px;
+	height: 65px;
+	display: block;
+	background: url("../i/Play.png") no-repeat center;
+	background-size: 100%;
+	float: left;
+	margin: 10px 25px;
+	border-radius: 50%;
+}
+.btn-play.active{
+	background: url("../i/Pause.png") no-repeat center;
+	background-size: 100%;
+}
+.btn-help{
+	width: 79px;
+	height: 79px;
+	display: block;
+	background: url("../i/Help.png") no-repeat center;
+	background-size: 100%;
+	float: left;
+	margin-left: 20px;
+	border-radius: 50%;
+}
+.btn-stop{
+	width: 65px;
+	height: 65px;
+	display: block;
+	background: url("../i/Stop-none.png") no-repeat center;
+	background-size: 100%;
+	float: left;
+	margin-top: 10px;
+	border-radius: 50%;
+}
+.btn-stop.active{
+	background: url("../i/Stop.png") no-repeat center;
+	background-size: 100%;
+}
+.pp-wrapper{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.8);
+	left: 0;
+	top: 0;
+	z-index: 9999;
+}
+.pp-content{
+	width: 90%;
+	height: 200px;
+	background-color: #e7e7e7;
+	position: absolute;
+	overflow: auto;
+}
+.table-pp{
+	overflow: auto;
+	width: 100%;
+}
+.text-center{
+	text-align: center;
+}
+.table-pp thead{
+	background-color: #cbcbcb;
+}
+.table-pp tr{
+	height: 46px;
+}
+.table-pp thead tr{
+	height: 58px;
+}
+.table-pp thead tr th{
+	font-size: 17px;
+}
+.table-pp th,
+.table-pp td{
+	padding: 0 15px;
+	font-size: 15px;
+	border: 2px solid #fff;
+}
+.two-width{
+	width: 74%;
+	text-align: right;
+}
+.two-width p{
+	padding-right: 50px;
+}
+.scroll-ct tr:nth-child(2n){
+	background-color: #f1f1f1;
+}
+.scroll-ct tr:nth-child(n+4){
+	display: none;
+}
+.scroll-ct.show tr:nth-child(n+4){
+	display: table-row;
+}
+@media only screen and (min-width: 411px){	
+	.content-game {
+	    padding-top: 210px;
+	}
+	.ui-progressbar {
+	    top: 370px;
+	}
+}
+@media only screen and (max-width: 360px){	
+	.content-game {
+	    padding-top: 160px;
+	}
+	.list-btn {
+	    height: 90px;
+	}
+	.ui-progressbar {
+	    top: 315px;
+	}
+}
+@media only screen and (max-width: 320px){
+	.container-fluid.fix-top {
+	    background: url("../i/Background_v2_WithoutHoles-01.png") no-repeat center -30px;
+	    background-size: 100%;
+	}
+	.container-fluid.fix-top .content-game {
+	    padding-top: 80px;
+	}
+	.container-fluid.fix-top .ui-progressbar {
+	    top: 240px;
+	}
+	.ui-progressbar {
+	    right: -115px;
+	}
+	.content-game {
+	    padding-top: 135px;
+	}
+	.ui-progressbar {
+	    top: 295px;
+	}
+	.name {
+	    font-size: 13px;
+	}
+	.btn-play {
+	    width: 45px;
+	    height: 45px;
+	    margin: 5px 25px;
+	}
+	.btn-stop {
+	    width: 45px;
+	    height: 45px;
+	    margin-top: 5px;
+	}
+	.btn-help {
+	    width: 59px;
+	    height: 59px;
+	}
+	.list-btn {
+	    height: 70px;
+	}
+}

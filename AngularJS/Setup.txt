@@ -1,0 +1,12 @@
+npm install -g yo
+npm install -g generator-angular
+
+mkdir myapp
+cd myapp
+
+yo angular myapp
+
+grunt server
+grunt test
+
+grunt // production build

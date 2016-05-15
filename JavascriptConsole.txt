@@ -1,0 +1,36 @@
+console.log();
+console.warn();
+console.error();
+console.info();
+console.debug();
+
+Filter in Chrome, Search using Regex etc
+
+
+console.log("A hello","wolrd",foo,123); Multiple arguments allowed
+Substitution is also allowed
+console.log("A hello from %s %d %o",str,digit,object);
+
+console.log("CSS is also allowed using %c output","font:size:2em;color:blue");
+
+console.group("Group Me");
+console.groupCollapsed("Start as collapsed");
+  console.group("Nesting is allowed");
+  console.groupEnd();
+
+console.groupEnd();
+
+console.assert(a == b,"Error a is not equal to b)
+It is equivalent to
+if(!a == b) {
+  console.error("Ha, I told you a is not equal to b");
+}
+
+for(var i = 0; i < 50;i++) {
+  console.count("The value of i"); //Increments everytime this function is executed and prints the number after the statement
+}
+
+console.time("My time");
+console.timeEnd("My time");
+
+console.table(obj);
