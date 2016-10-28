@@ -20,3 +20,5 @@ git clone <<remoteRepoUrl>> --depth=1 //Dont get the commit history and only the
 //Add a remote repo
 git remote add origin https://github.com/ritzforce/portfolio.git
 git push -u origin master
+
+git clean -fd (Remove directories untracked)
