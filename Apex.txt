@@ -61,9 +61,10 @@ scheduledMerge m = new scheduledMerge();
 String sch = '20 30 8 10 2 ?';
 String jobID = system.schedule('Merge Job', sch, m);
 
+//Load custom metadataType Records
+https://github.com/forcedotcom/CustomMetadataLoader/blob/master/custom_md_loader/classes/CSVFileUtil.cls
 
-
-
+//===============================================================================================//
 public class CSVFileUtil {
 	//from https://developer.salesforce.com/page/Code_Samples#Parse_a_CSV_with_APEX
     public static List<List<String>> parseCSV(Blob csvFileBody,Boolean skipHeaders) {
