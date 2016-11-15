@@ -87,4 +87,5 @@ async.each(recordsArray,function(item,callback){
 node -v //Display version of node
 npm -v //Verson of npm
 
+http://christophervachon.com/2015/05/25/testing-middleware/
 
