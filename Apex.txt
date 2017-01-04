@@ -59,6 +59,7 @@ global class InjuryRevenueSchedulable implements Schedulable {
 
 scheduledMerge m = new scheduledMerge();
 String sch = '20 30 8 10 2 ?';
+// 0 0 13 * * ? 	Class runs every day at 1 PM.
 String jobID = system.schedule('Merge Job', sch, m);
 
 //Load custom metadataType Records
