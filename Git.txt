@@ -1,5 +1,6 @@
 //Store credential configuration
 git config credential.helper store
+git config credential.helper cache //Cache for 15 minutes
 
 //Git commit and add in one command
 git commit -am "<<Commit Message>>"
