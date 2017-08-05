@@ -136,3 +136,5 @@ Replicate all objects from a managed package ?
 2. Extract Objects from the folder
 3. Deploy via Ant
 
+//Difference of time in minutes
+Decimal minutes = (decimal.valueOf(later.getTime() - start.getTime()))/1000/60;
