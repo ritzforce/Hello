@@ -130,3 +130,9 @@ public class CSVFileUtil {
         return allFields;       
     }
 }
+
+Replicate all objects from a managed package ?
+1. Create a project in Force.com IDE
+2. Extract Objects from the folder
+3. Deploy via Ant
+
