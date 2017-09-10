@@ -20,3 +20,10 @@ In order to communicate they adhere to some common rules, we can call the set of
 
 A communication may involve multiple protocols eg TCP / IP, used by the internet has both protocols TCP and IP protocols
 together to achieve reliable communication.
+
+Bandwidth is the maximum capacity of the channel that facilates the communication. similar to roads which can be different types
+eg metalled roads, concrete roads, mud roads. Channel can be of different types wires, wireless, fibreoptic etc
+
+Now since the information in computers in stored and transmitted as bits. A bit is zero or 1. This information needs to 
+transferred via physical medium which have limits. Bandwidth is the max amount of data that can be transferred.
+Its measured in bits per second. It could kbps / Mbps / Gbps 
