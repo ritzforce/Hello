@@ -29,12 +29,22 @@ eg metalled roads, concrete roads, mud roads. Channel can be of different types 
 
 Now since the information in computers in stored and transmitted as bits. A bit is zero or 1. This information needs to 
 transferred via physical medium which have limits. Bandwidth is the max amount of data that can be transferred.
-Its measured in bits per second. It could kbps / Mbps / Gbps 
+Its measured in bits per second. It could kbps / Mbps / Gbps
+
+The bits needs to be converted to signals and send across the medium. These signals might be converted several times, before 
+they reach their destination eg
+
+Electrical Signals
+Optical Signals
+Wireless Signals
 
 Throughtput is actual data passed on through the medium. Well Bandwidth is the theory and throughtput is the practical. Its like 
-check your car dashboard. Your car bandwidth is 200 Km / hr, but throughput is likely 100 km/ hr, that on a highway.
+check your car dashboard. Your car bandwidth is 200 Km / hr, but throughput is likely 100 km/ hr, that on a highway. so through
+put can vary depending the time period observed, data being sent etc
+Through put factors in the delays due to traffic, latency because of different intermediate devices etc.
+Through put is limited to the slowest bandwidth link in the network.
 
 Now what is Data ?
-Data is the information you input. eg a form asking about your name.
+Data is the information you input. eg a form asking about your name, photo, audio file etc
 This is an example of Volunteer data. 
 There could be inferred data, based on your IP address, the Webpage might figure out which location you are from ?
