@@ -1,2 +1,7 @@
 Computer Networking
 The primary function of networking is to communicate between computers or devices.
+
+Hosts are refered to a computers who are source or destination of the communication. 
+There is a server who provides the info or data. Client is the one consuming or requesting data.
+
+There could be number of intermedidate devices to facilatate this communication. They could be routers, hubs, switches
