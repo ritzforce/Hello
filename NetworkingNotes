@@ -13,10 +13,13 @@ to Mumbai. Some  roads are maintained by NHAI, Some by state governments, some b
 So your packet starts a journey from your computer and reaches its destination on the destionation PC. Every packet can take 
 different paths.
 
+That's the reason, why its drawn as a cloud, as no one knows whats the exact nature of the network.
 
 The cooperating thing we talked about in networks relies on protocols. 
 Protocol is a set of rules for communication. Since every network is different, every computer in the network is different.
 In order to communicate they adhere to some common rules, we can call the set of rules as protocols.
+
+Everything you access is stored somewhere on some server on a LAN (probably) and its connected to the internet
 
 A communication may involve multiple protocols eg TCP / IP, used by the internet has both protocols TCP and IP protocols
 together to achieve reliable communication.
@@ -30,3 +33,8 @@ Its measured in bits per second. It could kbps / Mbps / Gbps
 
 Throughtput is actual data passed on through the medium. Well Bandwidth is the theory and throughtput is the practical. Its like 
 check your car dashboard. Your car bandwidth is 200 Km / hr, but throughput is likely 100 km/ hr, that on a highway.
+
+Now what is Data ?
+Data is the information you input. eg a form asking about your name.
+This is an example of Volunteer data. 
+There could be inferred data, based on your IP address, the Webpage might figure out which location you are from ?
