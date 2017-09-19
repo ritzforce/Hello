@@ -76,4 +76,10 @@ SSH, DNS, DHCP, Http are another set of protocols that run on top of TCP/IP.
 3. IMAP (Internet Message Access Protocol)
 
 
+Socket = IP Address + Port Number is called a socket.
 
+Ports are logical endpoints. Since IP Address physically idenifies a host or one NIC. A host could be running multiple applications 
+on the same host. Ports ensure, the data intended for an application reaches the application.
+
+Ports are needed on both sides on client as well as server. Server usually has well known ports and client usually uses random ports
+An application usually has a buffer, which stores the packets that are received from clients for processing.
