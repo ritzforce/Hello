@@ -48,3 +48,21 @@ Now what is Data ?
 Data is the information you input. eg a form asking about your name, photo, audio file etc
 This is an example of Volunteer data. 
 There could be inferred data, based on your IP address, the Webpage might figure out which location you are from ?
+
+
+IPv6
+IPv6 uses 128 bits for address instead of 32 bits for IPv4
+FE08: is the non routable address in IPv6 similar to 10, 172.16, 192.168.1 
+
+An IPv6 address can be very large, hence to shorten it there are 2 rules
+1) Leading zeros can be dropped
+2) The largest sequenece Consecutive zeros can be abbreviated as ::
+
+eg FE09:0900:ABC1:0001 can be written as FE08:900:ABC1:1
+Similarly FE08:0000:0900:0000:0000:0000:AB11 as FE08:0:900::AB11
+
+
+
+
+
+
