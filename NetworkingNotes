@@ -61,6 +61,8 @@ An IPv6 address can be very large, hence to shorten it there are 2 rules
 eg FE09:0900:ABC1:0001 can be written as FE08:900:ABC1:1
 Similarly FE08:0000:0900:0000:0000:0000:AB11 as FE08:0:900::AB11
 
+An IPv6 can auto assign its IP and seek information from the router about default gateway, DNS etc. An DHCP can be made redundant 
+in IPv6 network.
 
 
 
