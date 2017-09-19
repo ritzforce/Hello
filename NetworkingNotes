@@ -69,4 +69,11 @@ URL
 https://www.google.com/hello/index.htm
 Protocol - Domain Name Folder Resource
 
+SSH, DNS, DHCP, Http are another set of protocols that run on top of TCP/IP.
+
+1. SSH (Secure Shell) allows remote access to servers and networking devices
+2. Post Office Protocol (Email clients to get emails from Remote Server)
+3. IMAP (Internet Message Access Protocol)
+
+
 
