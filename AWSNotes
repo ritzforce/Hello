@@ -1,0 +1,6 @@
+S3 Notes
+
+Bucket Name should be DNS - Compliant.
+Bucket Name is unique across all of AWS Buckets
+Bucket Name once created cannot be changed.
+If Bucket is deleted, the name is available for resuse, but it may not happen immediately.
