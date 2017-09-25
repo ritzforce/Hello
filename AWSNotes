@@ -6,3 +6,5 @@ Bucket Name once created cannot be changed.
 If Bucket is deleted, the name is available for resuse, but it may not happen immediately.
 Buckets reside in a region.
 Buckets store objects . Objects can be a folder, file, photo, zip file etc
+
+By Default, buckets are private, only the AWS account owner can access data uploaded to Amazon S3. 
