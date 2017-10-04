@@ -7,9 +7,10 @@ If Bucket is deleted, the name is available for resuse, but it may not happen im
 Though Buckets has to reside in a region, the name should be unique across all regions
 Buckets store objects . Objects can be a folder, file, photo, zip file etc
 
-
-
 By Default, buckets are private, only the AWS account owner can access data uploaded to Amazon S3. 
+
+Bucket creation is free, no charges incurred. Charges are only incurred when objects are stored.
+
 
 
 Latency => Is the delay that occurs, when you issue an instruction and when the output arrives. eg it takes 20 mins for an in
