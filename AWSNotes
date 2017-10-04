@@ -1,5 +1,7 @@
 S3 Notes
 
+https://aws.amazon.com/s3/faqs/
+
 Bucket Name should be DNS - Compliant.
 Bucket Name is unique across all of AWS Buckets
 Bucket Name once created cannot be changed.
@@ -9,7 +11,7 @@ Buckets store objects . Objects can be a folder, file, photo, zip file etc
 
 By Default, buckets are private, only the AWS account owner can access data uploaded to Amazon S3. 
 
-Bucket creation is free, no charges incurred. Charges are only incurred when objects are stored.
+Bucket creation is free, no charges incurred. Charges are only incurred when objects are stored and transfer of data out.
 
 
 
