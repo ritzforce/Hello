@@ -4,6 +4,7 @@ import { NavigationMixin }  from 'lightning/navigation';
 
 export default class RitzMaster extends NavigationMixin(LightningElement) {
     @api flexipageRegionWidth; // Displays LARGE, SMALL, MEDIUM in UPPER case, use it in CSS to define 
+    @api recordId; //The recordId in case the component is invoked in Record Context. Not applicable to Communities
     
 
     showToast(e) {
