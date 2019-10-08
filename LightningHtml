@@ -1,0 +1,5 @@
+<lightning-card title="Hello world" icon-name="standard:account">
+  <div class="slds-p-around_medium">
+     Content 
+  </div>
+</lightning-card>
