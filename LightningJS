@@ -1,0 +1,17 @@
+import { LightningElement } from 'lwc';
+import { NavigationMixin } from 'lightning/navigation';
+
+export default class RitzMaster extends NavigationMixin(LightningElement) {
+
+
+    // Go to Chatter
+    // Applies to home
+    goToChatter() {
+        this[NavigationMixin.Navigate]({
+            type:'standard__namedPage',
+            attributes:{
+                pageName:'chatter'
+            }
+        });
+    }
+}
