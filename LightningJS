@@ -1,11 +1,21 @@
 import { LightningElement, track, api } from 'lwc';
 import { ShowToastEvent }   from 'lightning/platformShowToastEvent';
 import { NavigationMixin }  from 'lightning/navigation';
+import { getRecord } from 'lightning/uiRecordApi';
+
+const FIELDS = [
+    Contact.Name,
+    Contact.Email,
+    Contact.Phone
+];
 
 export default class RitzMaster extends NavigationMixin(LightningElement) {
     @api flexipageRegionWidth; // Displays LARGE, SMALL, MEDIUM in UPPER case, use it in CSS to define 
     @api recordId; //The recordId in case the component is invoked in Record Context. Not applicable to Communities
     
+
+    @wire(getRecord, {id : `${recordId}`, fields: FIELDS})
+    contactRecord;
 
     showToast(e) {
         const toastEvent = new ShowToastEvent({
