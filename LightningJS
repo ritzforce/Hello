@@ -26,7 +26,7 @@ export default class RitzMaster extends NavigationMixin(LightningElement) {
     }
      
      goToRecord() {
-         this[NavigationMixin.navigate]({
+         this[NavigationMixin.Navigate]({
                 type: "standard__recordPage",
                 attributes: {
                     objectApiName: "Broker__c",
